@@ -1,0 +1,5 @@
+
+html {
+  @include full-wh(block);
+  @include custom-scroll;
+}

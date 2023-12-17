@@ -1,0 +1,51 @@
+
+.button {
+  &__media {
+    @include square(64px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 64px;
+    background: $violetLight;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.2s;
+
+    &:hover {
+      background: $violetExtraLight;
+    }
+  }
+
+  &__primary {
+    @include font(20px, 24px, $primary, 700);
+
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: 0 40px;
+    background: $violetSecondary;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 80px;
+    transition: 0.2s;
+
+    &:hover {
+      background: rgba(113, 86, 253, 0.61);
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .button {
+    &__media {
+      @include square(56px);
+
+      min-height: 56px;
+
+      img {
+        width: 48px;
+      }
+    }
+  }
+}

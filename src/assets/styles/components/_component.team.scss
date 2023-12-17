@@ -1,0 +1,83 @@
+
+.team {
+  @include full-width(block);
+
+  .wrapper {
+    position: relative;
+  }
+
+  &__content {
+    @include full-width(flex);
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 24% 0 100px 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__caption {
+    @include font(26px, 38px, $primary, 700);
+
+    max-width: 280px;
+  }
+
+  p {
+    max-width: 366px;
+    margin-top: 20px;
+  }
+
+  &__decoration {
+    display: flex;
+    justify-content: flex-end;
+    transition: 0.5s;
+    position: absolute;
+    top: 0;
+    right: -78px;
+    z-index: -1;
+
+    picture, img {
+      width: 1088px;
+      transition: 0.5s;
+    }
+  }
+}
+
+@media screen and (max-width: 1530px) {
+  .team {
+    &__decoration {
+      right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .team {
+    &__decoration {
+      img {
+        width: 88%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .team {
+    &__decoration {
+      opacity: 0.2;
+
+      img {
+        width: 880px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .team {
+    &__content {
+      padding: 100px 0;
+    }
+  }
+}

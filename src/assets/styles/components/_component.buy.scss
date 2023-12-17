@@ -1,0 +1,102 @@
+
+.buy {
+  @include full-width(block);
+
+  margin-top: 100px;
+
+  &__container {
+    @include full-width(flex);
+
+    align-items: center;
+    justify-content: space-between;
+    height: 188px;
+    padding: 0 118px;
+    background: linear-gradient(rgba($violetSecondary, 0.2), rgba($pink, 0.2));
+    border: 1px solid $violetSecondary;
+    border-radius: 40px;
+    transition: 0.5s;
+    position: relative;
+  }
+
+  &__caption {
+    @include font(26px, 38px, $primary, 700);
+  }
+
+  &__decoration {
+    display: block;
+    width: 300px;
+    height: 18px;
+    position: absolute;
+
+    &--top {
+      left: 90px;
+      top: -10px;
+    }
+
+    &--bottom {
+      right: 90px;
+      bottom: -10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .buy {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .buy {
+    &__container {
+      padding: 0 50px;
+    }
+
+    &__caption {
+      max-width: 190px;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .buy {
+    &__container {
+      flex-direction: column;
+      row-gap: 24px;
+      height: auto;
+      padding: 40px 32px;
+
+      .button {
+        &__primary {
+          height: 60px;
+          padding: 0 24px;
+          font-size: 18px;
+        }
+      }
+    }
+
+    &__caption {
+      max-width: 100%;
+      font-size: 22px;
+      line-height: 36px;
+      text-align: center;
+    }
+
+    &__decoration {
+      display: flex;
+      align-items: flex-start;
+      max-width: 50%;
+      overflow: hidden;
+
+      &--top, &--bottom {
+        margin: 0 auto;
+        left: 1%;
+        right: 1%;
+      }
+
+      &--top {
+        justify-content: flex-end;
+      }
+    }
+  }
+}

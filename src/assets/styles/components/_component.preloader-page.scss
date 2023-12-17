@@ -1,0 +1,66 @@
+
+.preloader-page {
+  @include full-wh(flex);
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $violet;
+  opacity: 1;
+  visibility: visible;
+  transition: 1s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+
+  &.complete {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &_logo {
+    text-align: center;
+
+    img {
+      width: 92px;
+    }
+  }
+
+  &_progress {
+    display: block;
+    width: 0%;
+    height: 100%;
+    background: $pink;
+    transition: 1s;
+
+    &-wrapper {
+      @include full-width(block);
+
+      max-width: 200px;
+      height: 6px;
+      margin-top: 16px;
+      overflow: hidden;
+      border: 1px solid $violetSecondary;
+      border-radius: 12px;
+    }
+  }
+
+  &_message {
+    @include full-width(block);
+    @include font(12px, 20px, $white, 400);
+
+    margin-top: 16px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: 0.5s;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+}

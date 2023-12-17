@@ -1,0 +1,55 @@
+
+.root {
+  @include full-wh(table);
+
+  table-layout: fixed;
+}
+
+.container {
+  @include full-width(block);
+
+  margin-top: $siteHeaderHeight;
+  transition: 0.3s;
+}
+
+.wrapper {
+  @include full-width(block);
+
+  max-width: $siteContainerWidth;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+
+.middle-wrap {
+  @include full-width(block);
+
+  max-width: $siteWrapperWidth;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1400px) {
+  .wrapper {
+    padding: 0 32px;
+  }
+
+  .wrapper, .middle-wrap {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    margin-top: $siteHeaderHeightMobile;;
+  }
+
+  .wrapper {
+    padding: 0 24px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .wrapper {
+    padding: 0 16px;
+  }
+}

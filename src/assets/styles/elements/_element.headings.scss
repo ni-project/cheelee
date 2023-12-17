@@ -1,0 +1,38 @@
+
+h1, .h1 {
+  @include font($H1_fontSize, $H1_lineHeight, $H_color, 900);
+
+  margin: 0;
+  transition: 0.5s;
+}
+
+h2, .h2 {
+  @include font($H2_fontSize, $H2_lineHeight, $H_color, 900);
+
+  margin: 0;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 1150px) {
+  h1, .h1 {
+    font-size: $H1_fontSize_tablet;
+    line-height: $H1_lineHeight_tablet;
+  }
+
+  h2, .h2 {
+    font-size: $H2_fontSize_tablet;
+    line-height: $H2_lineHeight_tablet;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  h1, .h1 {
+    font-size: $H1_fontSize_mobile;
+    line-height: $H1_lineHeight_mobile;
+  }
+
+  h2, .h2 {
+    font-size: $H2_fontSize_mobile;
+    line-height: $H2_lineHeight_mobile;
+  }
+}

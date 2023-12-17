@@ -1,0 +1,66 @@
+
+.boxes {
+  @include full-width(block);
+  margin-top: 100px;
+
+  .middle-wrap {
+    position: relative;
+  }
+
+  h2 {
+    max-width: 740px;
+  }
+
+  p {
+    max-width: 400px;
+    margin-top: 20px;
+  }
+
+  &__container {
+    @include full-width(block);
+
+    position: relative;
+    z-index: 2;
+  }
+
+  &__decoration {
+    display: flex;
+    transition: 0.5s;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    z-index: 1;
+
+    img {
+      width: 404px;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .boxes {
+    padding-bottom: 100px;
+    overflow: hidden;
+
+    h2, .h2 {
+      max-width: 500px;
+    }
+
+    &__decoration {
+      right: -124px;
+      top: -12px;
+
+      img {
+        width: 360px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .boxes {
+    &__decoration {
+      opacity: 0.2;
+    }
+  }
+}

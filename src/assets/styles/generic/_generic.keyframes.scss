@@ -1,0 +1,91 @@
+
+// HELLO TITLE ANIMATE
+@-webkit-keyframes HelloTitleAnimate {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+@keyframes HelloTitleAnimate {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+// HELLO DOWNLOAD GOOGLE ANIMATE
+@-webkit-keyframes HelloDownloadGoogleAnimate {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes HelloDownloadGoogleAnimate {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+// HELLO SOCIAL BUTTON ANIMATE
+@-webkit-keyframes HelloSocialButtonAnimate {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.2);
+  }
+
+  70% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+
+@keyframes HelloSocialButtonAnimate {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.2);
+  }
+
+  70% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+}

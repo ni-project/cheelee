@@ -1,0 +1,124 @@
+
+.hello {
+  position: relative;
+
+  &__background {
+    @include full-width(block);
+
+    transition: 0.5s;
+    position: relative;
+    z-index: 1;
+
+    picture, img {
+      margin: 0 auto;
+      max-width: 100%;
+      max-height: 850px;
+      transition: 0.5s;
+    }
+  }
+
+  &__container {
+    @include full-wh(flex);
+
+    align-items: center;
+    min-height: 500px;
+    max-height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+
+    .wrapper {
+      position: relative;
+    }
+
+    h1, .h1 {
+      max-width: 350px;
+      transition: 0.5s;
+    }
+  }
+
+  &__download {
+    display: block;
+    margin-top: 160px;
+
+    &-description {
+      @include full-width(block);
+      @include font(20px, 28px, $white, 700);
+
+      margin-top: 10px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 20px;
+    height: 100%;
+    transition: 0.5s;
+    position: absolute;
+    top: -30px;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .hello {
+    &__container {
+      h1, .h1 {
+        max-width: 310px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .hello {
+    &__socials {
+      right: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hello {
+    &__background {
+      img {
+        max-height: unset;
+        object-fit: cover;
+        height: 670px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .hello {
+    &__background {
+      opacity: 0.2;
+
+      img {
+        height: 560px;
+      }
+    }
+
+    &__socials {
+      row-gap: 12px;
+    }
+
+    &__container {
+      h1, .h1 {
+        max-width: 200px;
+      }
+    }
+
+    &__download {
+      &-description {
+        max-width: 70%;
+      }
+    }
+  }
+}

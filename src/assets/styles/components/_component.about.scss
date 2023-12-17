@@ -1,0 +1,55 @@
+
+.about {
+  @include full-width(block);
+
+  &__history {
+    @include full-width(grid);
+
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 40px;
+    margin-top: 40px;
+
+    & > div {
+      &:nth-child(3) {
+        grid-column: span 2;
+      }
+    }
+
+    p {
+      @include font(26px, 38px, $primary, 400);
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .about {
+    &__history {
+      p {
+        font-size: 22px;
+        line-height: 36px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .about {
+    &__history {
+      grid-template-columns: 1fr;
+      row-gap: 16px;
+      margin-top: 24px;
+
+      & > div {
+        &:nth-child(3) {
+          grid-column: 1;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+
+.complete {
+
+  .hello {
+    &__container {
+      h1 {
+        animation: 0.5s HelloTitleAnimate 0s ease-in-out both;
+      }
+    }
+
+    &__download {
+      animation: 0.5s HelloDownloadGoogleAnimate 0s ease-in-out both;
+    }
+
+    &__socials {
+      .button__media {
+        @for $index from 1 through 6 {
+          $animationDelay: $index * 0.1;
+
+          &:nth-child(#{$index}) {
+            animation: 0.5s HelloSocialButtonAnimate #{$animationDelay}s ease-out both;
+          }
+        }
+      }
+    }
+  }
+
+}
