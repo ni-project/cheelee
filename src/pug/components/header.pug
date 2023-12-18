@@ -1,0 +1,46 @@
+include ../variables/menu
+block menu
+
+.header
+    .wrapper
+        .header__wrapper
+            .header__menu-button
+                span
+                span
+                span
+
+            a.header__logo(href="/")
+                img(src="assets/images/logo.png" alt="" draggable="false")
+
+                .header__logo-slogan BY NUTSon
+
+            .header__menu
+                nav
+                    ul
+                        each menu, index in dataMenu
+                            - var isActive = index === dataMenu.length - 1 ? 'active' : ''
+
+                            li
+                                a(href=`${menu.url}` class=`${isActive}`)= menu.title
+
+                .header__controls
+                    .cheel
+                        img(src="assets/images/icons/cheel.png" alt="" draggable="false")
+
+                        .cheel__content
+                            .cheel__caption Cheel
+                            .cheel__cost $8,00
+
+                    .cheel
+                        img(src="assets/images/icons/lee.png" alt="" draggable="false")
+
+                        .cheel__content
+                            .cheel__caption Lee
+                            .cheel__cost $8,00
+
+                    .header__audited
+                        img(src="assets/images/icons/audited.svg" alt="" draggable="false")
+
+                    .header__lang En
+
+            .header__menu-button-close

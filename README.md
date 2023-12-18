@@ -1,6 +1,6 @@
 # cheelee
 
-Webpack, html, scss, ITCSS Methodology
+Webpack, PUG, scss, ITCSS Methodology
 
 ## Project setup
 ```

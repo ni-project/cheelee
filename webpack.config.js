@@ -19,6 +19,10 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.pug$/i,
+                use: ['pug-loader']
+            },
+            {
                 test: /\.(sa|sc|c)ss$/i,
                 use: [
                     MiniCssExtractPlugin.loader,
@@ -39,7 +43,7 @@ module.exports = {
             ]
         }),
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            template: './src/index.pug'
         }),
         new MiniCssExtractPlugin({
             filename: 'assets/styles/' + outputFilename('css')

@@ -1,0 +1,27 @@
+include ../variables/socials
+block socials
+
+.hello
+    .hello__background
+        picture
+            source(srcset="assets/images/background/hello.webp" type="image/webp")
+            img(src="assets/images/background/hello.jpg" alt="" draggable="false")
+
+    .hello__container
+        .wrapper
+            h1 GameFi short video
+                span.color--green-light
+                    |
+                    | platform
+
+            .hello__download
+                a.button__media(href="/")
+                    img(src="assets/images/icons/google-play.svg" alt="" draggable="false")
+
+                .hello__download-description Pre-registration in Google Play
+
+            .hello__socials
+
+                each social in dataSocials
+                    a.button__media(href=`${social.url}`)
+                        img(src=`${social.imageUrl}` alt="" draggable="false")
